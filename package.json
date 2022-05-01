@@ -6,7 +6,10 @@
   "scripts": {
     "start": "cd server && npm start",
     "build": "cd server && npm install",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --write **/*.{js,jsx,ts,tsx}",
+    "format:check": "prettier --check **/*.{js,jsx,ts,tsx}",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -18,5 +21,12 @@
   "bugs": {
     "url": "https://github.com/tobiasSchistad/lecture-fivefix/issues"
   },
-  "homepage": "https://github.com/tobiasSchistad/lecture-fivefix#readme"
+  "homepage": "https://github.com/tobiasSchistad/lecture-fivefix#readme",
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "prettier": "^2.6.2"
+  },
+  "dependencies": {
+    "Husky": "npm:husky@^7.0.4"
+  }
 }
